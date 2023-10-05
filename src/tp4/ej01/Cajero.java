@@ -6,10 +6,14 @@ package tp4.ej01;
 */
 public class Cajero {
 
+	private static int contadorIds = 0;
+	private int id;
 	private String apellido;
 	private int antiguedad;
 	
 	public Cajero(String apellido, int antiguedad) {
+		this.id = contadorIds;
+		contadorIds++;
         setApellido(apellido);
         setAntiguedad(antiguedad);
     }
